@@ -25,8 +25,14 @@ public class AnimalFeedingGame : MonoBehaviour
     private int lionFedTimes = 0;
     private int elephantFedTimes = 0;
 
+
+    private void Awake(){
+        SoundManager.Initialize();
+    }
+
     private void Start()
     {
+        SoundManager.PlaySound(SoundManager.Sound.StartFodring);
          // Load all food sprites from Resources folder
         Sprite[] sprites = Resources.LoadAll<Sprite>("FoodSprites");
         foreach (Sprite sprite in sprites)
@@ -41,6 +47,7 @@ public class AnimalFeedingGame : MonoBehaviour
     {
         if (lionFoodTypes.Contains(currentFoodType))
         {
+            SoundManager.PlaySound(SoundManager.Sound.RigtigFodring);
             messageText.text = "Lion fed!";
             lionFedTimes++;            
             lionCounterText.text = "Lion: " + lionFedTimes + " / " + maxFedTimes;
@@ -52,6 +59,7 @@ public class AnimalFeedingGame : MonoBehaviour
         }
         else
         {
+            SoundManager.PlaySound(SoundManager.Sound.ForkertFodring);
             messageText.text = "Incorrect!";
         }
     }
@@ -60,6 +68,7 @@ public class AnimalFeedingGame : MonoBehaviour
     {
         if (elephantFoodTypes.Contains(currentFoodType))
         {
+            SoundManager.PlaySound(SoundManager.Sound.RigtigFodring);
             messageText.text = "Elephant fed!";
             elephantFedTimes++;
             elephantCounterText.text = "Elephant: " + elephantFedTimes + " / " + maxFedTimes;
@@ -71,6 +80,7 @@ public class AnimalFeedingGame : MonoBehaviour
         }
         else
         {
+            SoundManager.PlaySound(SoundManager.Sound.ForkertFodring);
             messageText.text = "Incorrect!";
         }
     }
