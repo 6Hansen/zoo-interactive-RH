@@ -5,22 +5,29 @@ using UnityEngine.UI;
 
 public class AnimalFeedingGame : MonoBehaviour
 {
+    
+    public Text foodTypeText;
+    public Image foodImage;
     public Button lionButton;
     public Button elephantButton;
-    public Text foodText;
     public Text messageText;
-    public Image foodImage;
+    public Text lionCounterText;
+    public Text elephantCounterText;
 
-    private List<string> lionFoodTypes = new List<string>{"meat", "fish", "chicken"};
-    private List<string> elephantFoodTypes = new List<string>{"hay", "fruit", "vegetables", "nuts"};
+    public int maxFedTimes = 5; // Number of times each animal needs to be fed before game ends
+
+    private List<string> lionFoodTypes = new List<string>() { "Fisk", "Kylling", "Kød" };
+    private List<string> elephantFoodTypes = new List<string>() { "Halm", "Frugt", "Nødder", "Grøntsager" };
     private Dictionary<string, Sprite> foodSprites = new Dictionary<string, Sprite>();
 
     private string currentFoodType;
 
-    // Start is called before the first frame update
-    void Start()
+    private int lionFedTimes = 0;
+    private int elephantFedTimes = 0;
+
+    private void Start()
     {
-        // Load all food sprites from Resources folder
+         // Load all food sprites from Resources folder
         Sprite[] sprites = Resources.LoadAll<Sprite>("FoodSprites");
         foreach (Sprite sprite in sprites)
         {
@@ -28,55 +35,51 @@ public class AnimalFeedingGame : MonoBehaviour
         }
 
         SpawnFood();
-
-        lionButton.onClick.AddListener(() =>
-        {
-            if (lionFoodTypes.Contains(currentFoodType))
-            {
-                messageText.text = "You fed the lion!";
-                SpawnFood();
-            }
-            else
-            {
-                messageText.text = "Wrong food! Try again.";
-            }
-        });
-
-        elephantButton.onClick.AddListener(() =>
-        {
-            if (elephantFoodTypes.Contains(currentFoodType))
-            {
-                messageText.text = "You fed the elephant!";
-                SpawnFood();
-            }
-            else
-            {
-                messageText.text = "Wrong food! Try again.";
-            }
-        });
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LionButtonClicked()
     {
-        
-    }
-
-    void SpawnFood()
-    {
-        int animalIndex = Random.Range(0, 2);
-        if (animalIndex == 0)
+        if (lionFoodTypes.Contains(currentFoodType))
         {
-            currentFoodType = lionFoodTypes[Random.Range(0, lionFoodTypes.Count)];
+            messageText.text = "Lion fed!";
+            lionFedTimes++;            
+            lionCounterText.text = "Lion: " + lionFedTimes + " / " + maxFedTimes;
+            if (lionFedTimes >= maxFedTimes && elephantFedTimes >= maxFedTimes) {
+                EndGame();
+            } else {
+                SpawnFood();
+            }
         }
         else
         {
-            currentFoodType = elephantFoodTypes[Random.Range(0, elephantFoodTypes.Count)];
+            messageText.text = "Incorrect!";
         }
+    }
 
-        foodText.text = "Food type: " + currentFoodType;
+    public void ElephantButtonClicked()
+    {
+        if (elephantFoodTypes.Contains(currentFoodType))
+        {
+            messageText.text = "Elephant fed!";
+            elephantFedTimes++;
+            elephantCounterText.text = "Elephant: " + elephantFedTimes + " / " + maxFedTimes;
+            if (lionFedTimes >= maxFedTimes && elephantFedTimes >= maxFedTimes) {
+                EndGame();
+            } else {
+                SpawnFood();
+            }
+        }
+        else
+        {
+            messageText.text = "Incorrect!";
+        }
+    }
 
-        // Display corresponding food image
+    private void SpawnFood()
+    {
+        currentFoodType = GetRandomFoodType();
+        foodTypeText.text = "Food type: " + currentFoodType;
+                // Display corresponding food image
         Sprite foodSprite;
         if (foodSprites.TryGetValue(currentFoodType, out foodSprite))
         {
@@ -86,5 +89,26 @@ public class AnimalFeedingGame : MonoBehaviour
         {
             Debug.LogError("No sprite found for food type: " + currentFoodType);
         }
+        messageText.text = "";
+    }
+
+    private string GetRandomFoodType()
+    {
+        int randomIndex = Random.Range(0, lionFoodTypes.Count + elephantFoodTypes.Count);
+        if (randomIndex < lionFoodTypes.Count)
+        {
+            return lionFoodTypes[randomIndex];
+        }
+        else
+        {
+            return elephantFoodTypes[randomIndex - lionFoodTypes.Count];
+        }
+    }
+
+    private void EndGame()
+    {
+        messageText.text = "Game over!";
+        lionButton.interactable = false;
+        elephantButton.interactable = false;
     }
 }
