@@ -1,5 +1,5 @@
 sceneSetups:
-- path: "Assets/Scenes/FodringL\xF8ve.unity"
+- path: Assets/Scenes/MusicalChairs.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
