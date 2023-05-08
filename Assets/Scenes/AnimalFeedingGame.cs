@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AnimalFeedingGame : MonoBehaviour
 {
-    
+
     public Text foodTypeText;
     public Image foodImage;
     public Button lionButton;
@@ -26,14 +26,15 @@ public class AnimalFeedingGame : MonoBehaviour
     private int elephantFedTimes = 0;
 
 
-    private void Awake(){
-        SoundManager.Initialize();
-    }
+    //private void Awake(){
+    //SoundManager.Initialize();
+    //}
 
     private void Start()
     {
-        SoundManager.PlaySound(SoundManager.Sound.StartFodring);
-         // Load all food sprites from Resources folder
+        //SoundManager.PlaySound(SoundManager.Sound.StartFodring);
+        FindObjectOfType<AudioManager>().Play("GameStart");
+        // Load all food sprites from Resources folder
         Sprite[] sprites = Resources.LoadAll<Sprite>("FoodSprites");
         foreach (Sprite sprite in sprites)
         {
@@ -47,19 +48,24 @@ public class AnimalFeedingGame : MonoBehaviour
     {
         if (lionFoodTypes.Contains(currentFoodType))
         {
-            SoundManager.PlaySound(SoundManager.Sound.RigtigFodring);
+            //SoundManager.PlaySound(SoundManager.Sound.RigtigFodring);
+            FindObjectOfType<AudioManager>().Play("RightFood");
             messageText.text = "Lion fed!";
-            lionFedTimes++;            
+            lionFedTimes++;
             lionCounterText.text = "Lion: " + lionFedTimes + " / " + maxFedTimes;
-            if (lionFedTimes >= maxFedTimes && elephantFedTimes >= maxFedTimes) {
+            if (lionFedTimes >= maxFedTimes && elephantFedTimes >= maxFedTimes)
+            {
                 EndGame();
-            } else {
+            }
+            else
+            {
                 SpawnFood();
             }
         }
         else
         {
-            SoundManager.PlaySound(SoundManager.Sound.ForkertFodring);
+            //SoundManager.PlaySound(SoundManager.Sound.ForkertFodring);
+            FindObjectOfType<AudioManager>().Play("WrongFood");
             messageText.text = "Incorrect!";
         }
     }
@@ -68,19 +74,24 @@ public class AnimalFeedingGame : MonoBehaviour
     {
         if (elephantFoodTypes.Contains(currentFoodType))
         {
-            SoundManager.PlaySound(SoundManager.Sound.RigtigFodring);
+            //SoundManager.PlaySound(SoundManager.Sound.RigtigFodring);
+            FindObjectOfType<AudioManager>().Play("RightFood");
             messageText.text = "Elephant fed!";
             elephantFedTimes++;
             elephantCounterText.text = "Elephant: " + elephantFedTimes + " / " + maxFedTimes;
-            if (lionFedTimes >= maxFedTimes && elephantFedTimes >= maxFedTimes) {
+            if (lionFedTimes >= maxFedTimes && elephantFedTimes >= maxFedTimes)
+            {
                 EndGame();
-            } else {
+            }
+            else
+            {
                 SpawnFood();
             }
         }
         else
         {
-            SoundManager.PlaySound(SoundManager.Sound.ForkertFodring);
+            //SoundManager.PlaySound(SoundManager.Sound.ForkertFodring);
+            FindObjectOfType<AudioManager>().Play("WrongFood");
             messageText.text = "Incorrect!";
         }
     }
@@ -89,7 +100,7 @@ public class AnimalFeedingGame : MonoBehaviour
     {
         currentFoodType = GetRandomFoodType();
         foodTypeText.text = "Food type: " + currentFoodType;
-                // Display corresponding food image
+        // Display corresponding food image
         Sprite foodSprite;
         if (foodSprites.TryGetValue(currentFoodType, out foodSprite))
         {
