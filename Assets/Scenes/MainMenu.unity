@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f6ce6565d68b9478d0a8d2fdb51cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: "FodringL\xF8ve"
 --- !u!4 &1367867336
 Transform:
   m_ObjectHideFlags: 0

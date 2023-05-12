@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/MainMenu.unity
+    guid: 7376b6b2460c95745b02c07d3ad0eef0
+  - enabled: 0
+    path: "Assets/Scenes/FodringL\xF8ve.unity"
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/MusicalChairs.unity
+    guid: 514a2588b8187fa45a45193859877f4f
   m_configObjects: {}
