@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/FodringL\xF8ve.unity"
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MonkeyGame/LeftMonkeyGameCutscene.unity
+    guid: ed691fa3ceaaec94e8707531b5b61934
+  - enabled: 1
+    path: Assets/Scenes/MonkeyGame/Monkey_miniGame.unity
+    guid: 5c58cfaec51f3a04a9c737b07a40f9b1
   m_configObjects: {}
