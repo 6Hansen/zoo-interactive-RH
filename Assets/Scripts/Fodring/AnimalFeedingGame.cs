@@ -26,14 +26,12 @@ public class AnimalFeedingGame : MonoBehaviour
     private int elephantFedTimes = 0;
 
 
-    //private void Awake(){
-    //SoundManager.Initialize();
-    //}
+
 
     private void Start()
     {
-        //SoundManager.PlaySound(SoundManager.Sound.StartFodring);
-        FindObjectOfType<AudioManager>().Play("GameStart");
+        
+        //FindObjectOfType<AudioManager>().Play("GameStart");
         // Load all food sprites from Resources folder
         Sprite[] sprites = Resources.LoadAll<Sprite>("FoodSprites");
         foreach (Sprite sprite in sprites)
@@ -48,8 +46,8 @@ public class AnimalFeedingGame : MonoBehaviour
     {
         if (lionFoodTypes.Contains(currentFoodType))
         {
-            //SoundManager.PlaySound(SoundManager.Sound.RigtigFodring);
-            FindObjectOfType<AudioManager>().Play("RightFood");
+    
+            FindObjectOfType<AudioManager>().Play("RigtigtLøve");
             messageText.text = "Lion fed!";
             lionFedTimes++;
             lionCounterText.text = "Lion: " + lionFedTimes + " / " + maxFedTimes;
@@ -64,8 +62,8 @@ public class AnimalFeedingGame : MonoBehaviour
         }
         else
         {
-            //SoundManager.PlaySound(SoundManager.Sound.ForkertFodring);
-            FindObjectOfType<AudioManager>().Play("WrongFood");
+    
+            FindObjectOfType<AudioManager>().Play("ForkertLøve");
             messageText.text = "Incorrect!";
         }
     }
@@ -74,8 +72,7 @@ public class AnimalFeedingGame : MonoBehaviour
     {
         if (elephantFoodTypes.Contains(currentFoodType))
         {
-            //SoundManager.PlaySound(SoundManager.Sound.RigtigFodring);
-            FindObjectOfType<AudioManager>().Play("RightFood");
+            FindObjectOfType<AudioManager>().Play("RigtigtElefant");
             messageText.text = "Elephant fed!";
             elephantFedTimes++;
             elephantCounterText.text = "Elephant: " + elephantFedTimes + " / " + maxFedTimes;
@@ -90,8 +87,7 @@ public class AnimalFeedingGame : MonoBehaviour
         }
         else
         {
-            //SoundManager.PlaySound(SoundManager.Sound.ForkertFodring);
-            FindObjectOfType<AudioManager>().Play("WrongFood");
+            FindObjectOfType<AudioManager>().Play("ForkertElefant");
             messageText.text = "Incorrect!";
         }
     }
