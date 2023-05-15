@@ -494,6 +494,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 919244927}
+        m_TargetAssemblyTypeName: MonkeySceneChanger, Assembly-CSharp
+        m_MethodName: RightSceneClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 919244927}
+        m_TargetAssemblyTypeName: MonkeySceneChanger, Assembly-CSharp
+        m_MethodName: WrongRightSceneClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &291822057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,6 +813,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 919244927}
+        m_TargetAssemblyTypeName: MonkeySceneChanger, Assembly-CSharp
+        m_MethodName: WrongLeftSceneClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &732226770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,7 +913,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8219b81c08f34d14db6339dc2dd032eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monkeySceneName: LeftMonkeyGameCutscene
+  LeftSceneName: LeftMonkeyGameCutscene
+  RightSceneName: RightMonkeyGameCutscene
+  WrongLeftSceneName: WrongLeftPath
+  WrongRightSceneName: WrongRightPath
+  EndGoodSceneName: 
+  EndBadSceneName: 
 --- !u!4 &919244928
 Transform:
   m_ObjectHideFlags: 0

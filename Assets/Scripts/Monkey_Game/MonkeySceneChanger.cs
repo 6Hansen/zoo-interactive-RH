@@ -5,13 +5,42 @@ using UnityEngine;
 
 public class MonkeySceneChanger : MonoBehaviour
 {
-    public string monkeySceneName;
+    public string LeftSceneName;
+    public string RightSceneName;
+    public string WrongLeftSceneName;
+    public string WrongRightSceneName;
+    public string EndGoodSceneName;
+    public string EndBadSceneName;
 
     public void LeftSceneClick()
     {
         if (MonkeyGame_Controller.monkeyLeftCorrect == true)
         {
-            SceneManager.LoadScene(monkeySceneName);
+            SceneManager.LoadScene(LeftSceneName);
+        }
+    }
+
+    public void RightSceneClick()
+    {
+        if (MonkeyGame_Controller.monkeyRightCorrect == true)
+        {
+            SceneManager.LoadScene(RightSceneName);
+        }
+    }
+
+    public void WrongLeftSceneClick()
+    {
+        if (MonkeyGame_Controller.monkeyLeftCorrect == false)
+        {
+            SceneManager.LoadScene(WrongLeftSceneName);
+        }
+    }
+
+    public void WrongRightSceneClick()
+    {
+        if (MonkeyGame_Controller.monkeyRightCorrect == false)
+        {
+            SceneManager.LoadScene(WrongRightSceneName);
         }
     }
 }

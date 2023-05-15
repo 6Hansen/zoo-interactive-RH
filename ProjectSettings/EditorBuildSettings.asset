@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MonkeyGame/LeftMonkeyGameCutscene.unity
     guid: ed691fa3ceaaec94e8707531b5b61934
+  - enabled: 1
+    path: Assets/Scenes/MonkeyGame/RightMonkeyGameCutscene.unity
+    guid: 489be88d4dbafa146bd7e1c6ae1dc584
+  - enabled: 1
+    path: Assets/Scenes/MonkeyGame/WrongLeftPath.unity
+    guid: 83e050315a1d0314b9dcfbf915cd70a5
+  - enabled: 1
+    path: Assets/Scenes/MonkeyGame/WrongRightPath.unity
+    guid: 0ce15cca571d19f4d91f6d7791fe3cf0
   m_configObjects: {}
