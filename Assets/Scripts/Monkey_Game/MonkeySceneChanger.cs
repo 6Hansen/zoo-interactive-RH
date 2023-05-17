@@ -11,6 +11,7 @@ public class MonkeySceneChanger : MonoBehaviour
     public string WrongRightSceneName;
     public string EndGoodSceneName;
     public string EndBadSceneName;
+    public string MonkeyMiniGame;
 
     public void LeftSceneClick()
     {
@@ -43,4 +44,11 @@ public class MonkeySceneChanger : MonoBehaviour
             SceneManager.LoadScene(WrongRightSceneName);
         }
     }
+
+    public void MonkeyMiniGameButton()
+    {
+        SceneManager.LoadScene(MonkeyMiniGame);
+    }
+
+
 }

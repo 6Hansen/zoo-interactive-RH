@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2353112034852905233, guid: 45a9d029171f74548be653119f73f293, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.08
+      value: 10.08
       objectReference: {fileID: 0}
     - target: {fileID: 2353112034852905233, guid: 45a9d029171f74548be653119f73f293, type: 3}
       propertyPath: m_LocalPosition.y
@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2353112034852905325, guid: 45a9d029171f74548be653119f73f293, type: 3}
       propertyPath: m_Name
-      value: MonkeyTwo Variant
+      value: MonkeyTwo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a9d029171f74548be653119f73f293, type: 3}
