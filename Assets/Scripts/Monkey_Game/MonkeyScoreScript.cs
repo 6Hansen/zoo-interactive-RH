@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MonkeyScoreScript : MonoBehaviour
 {
 
+    public string EndGoodSceneName;
     public static int monkeyPoint = 0;
     Text score;
 
@@ -18,6 +20,12 @@ public class MonkeyScoreScript : MonoBehaviour
     {
         score.text = "score: " + monkeyPoint;
         Debug.Log("Points = " + monkeyPoint);
+
+        if (monkeyPoint == 1)
+        {
+            SceneManager.LoadScene(EndGoodSceneName);
+        }
+
     }
 
     public void LeftMonkeyClick()

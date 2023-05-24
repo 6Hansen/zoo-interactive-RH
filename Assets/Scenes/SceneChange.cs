@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
     public string sceneName;
-    // Start is called before the first frame update
-    
+    public string MainMenu;
+    public string FodringMiniGame;
+    public string MonkeyMiniGame;
+
 
     public void changeScene()
     {
@@ -41,5 +43,20 @@ public class SceneChange : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void MonkeyButton()
+    {
+        SceneManager.LoadScene(MonkeyMiniGame);
+    }
+
+    public void FodringButton()
+    {
+        SceneManager.LoadScene(FodringMiniGame);
+    }
+
+    public void MenuButton()
+    {
+        SceneManager.LoadScene(MainMenu);
     }
 }

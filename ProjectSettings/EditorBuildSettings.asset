@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MonkeyGame/WrongRightPath.unity
     guid: 0ce15cca571d19f4d91f6d7791fe3cf0
+  - enabled: 1
+    path: Assets/Scenes/MonkeyGame/MonkeyWin.unity
+    guid: b09e71febd0b2be45969e8d3d728e976
+  - enabled: 1
+    path: Assets/Scenes/MonkeyGame/WinEnd.unity
+    guid: f9352092df8e50c4d8569683447cffb5
   m_configObjects: {}

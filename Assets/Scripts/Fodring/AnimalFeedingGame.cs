@@ -13,6 +13,7 @@ public class AnimalFeedingGame : MonoBehaviour
     public Text messageText;
     public Text lionCounterText;
     public Text elephantCounterText;
+    public GameObject gameWinScreen;
 
     public int maxFedTimes = 5; // Number of times each animal needs to be fed before game ends
 
@@ -127,5 +128,6 @@ public class AnimalFeedingGame : MonoBehaviour
         messageText.text = "Game over!";
         lionButton.interactable = false;
         elephantButton.interactable = false;
+        gameWinScreen.SetActive(true);
     }
 }
