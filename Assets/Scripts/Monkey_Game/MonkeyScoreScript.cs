@@ -8,6 +8,7 @@ public class MonkeyScoreScript : MonoBehaviour
 {
 
     public string EndGoodSceneName;
+    public string EndLossSceneName;
     public static int monkeyPoint = 0;
     Text score;
 
@@ -21,9 +22,14 @@ public class MonkeyScoreScript : MonoBehaviour
         score.text = "score: " + monkeyPoint;
         Debug.Log("Points = " + monkeyPoint);
 
-        if (monkeyPoint == 1)
+        if (monkeyPoint == 5)
         {
             SceneManager.LoadScene(EndGoodSceneName);
+        }
+
+        if (MonkeyLife.monkeyLife == 0)
+        {
+            SceneManager.LoadScene(EndLossSceneName);
         }
 
     }

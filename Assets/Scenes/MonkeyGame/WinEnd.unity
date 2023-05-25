@@ -154,6 +154,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 
   MainMenu: MainMenu
+  FodringMiniGame: 
+  MonkeyMiniGame: 
+  "Papeg\xF8jeMiniGame": 
 --- !u!4 &277953254
 Transform:
   m_ObjectHideFlags: 0
@@ -393,6 +396,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1631286031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1631286033}
+  - component: {fileID: 1631286032}
+  m_Layer: 0
+  m_Name: Reset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1631286032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631286031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8aa7499bd1e3354e97d9d566426d6f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1631286033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631286031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1913.7107, y: 1117.7349, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1651959368
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +552,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1651959369}
     m_Modifications:
+    - target: {fileID: 1101263218983503072, guid: 9015ff102acbbf1499cc9bb50d798331, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be1ca04895a090f4babe79e0e5997d20, type: 3}
     - target: {fileID: 1101263219780710091, guid: 9015ff102acbbf1499cc9bb50d798331, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -555,8 +605,36 @@ PrefabInstance:
       value: EndButton
       objectReference: {fileID: 0}
     - target: {fileID: 1101263219872803839, guid: 9015ff102acbbf1499cc9bb50d798331, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101263219872803839, guid: 9015ff102acbbf1499cc9bb50d798331, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101263219872803839, guid: 9015ff102acbbf1499cc9bb50d798331, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 277953253}
+    - target: {fileID: 1101263219872803839, guid: 9015ff102acbbf1499cc9bb50d798331, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1631286032}
+    - target: {fileID: 1101263219872803839, guid: 9015ff102acbbf1499cc9bb50d798331, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101263219872803839, guid: 9015ff102acbbf1499cc9bb50d798331, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ResetButtonMonkey
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101263219872803839, guid: 9015ff102acbbf1499cc9bb50d798331, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Reset, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101263219872803839, guid: 9015ff102acbbf1499cc9bb50d798331, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9015ff102acbbf1499cc9bb50d798331, type: 3}

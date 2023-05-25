@@ -23,8 +23,8 @@ public class AnimalFeedingGame : MonoBehaviour
 
     private string currentFoodType;
 
-    private int lionFedTimes = 0;
-    private int elephantFedTimes = 0;
+    public static int lionFedTimes = 0;
+    public static int elephantFedTimes = 0;
 
 
 

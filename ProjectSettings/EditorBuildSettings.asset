@@ -35,4 +35,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MonkeyGame/WinEnd.unity
     guid: f9352092df8e50c4d8569683447cffb5
+  - enabled: 1
+    path: "Assets/Scenes/Papeg\xF8je/Papeg\xF8je.unity"
+    guid: bcb61730f4e3d9641892f0454ea873cb
+  - enabled: 1
+    path: Assets/Scenes/MonkeyGame/LossEnd.unity
+    guid: 2ebfd28d34982fc4fb3aba0edaf5dc41
+  - enabled: 1
+    path: Assets/Scenes/IntroScenes/MonkeyIntro.unity
+    guid: 843739e828d236841a67f9702f024f7e
+  - enabled: 1
+    path: Assets/Scenes/IntroScenes/FeedingIntro.unity
+    guid: e44cdca6468fbd94d8bd48eab0a8307a
+  - enabled: 1
+    path: Assets/Scenes/IntroScenes/ParotIntro.unity
+    guid: c9cbac7721fe7f342964bc13abb3fdef
   m_configObjects: {}

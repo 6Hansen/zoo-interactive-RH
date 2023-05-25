@@ -10,6 +10,7 @@ public class SceneChange : MonoBehaviour
     public string MainMenu;
     public string FodringMiniGame;
     public string MonkeyMiniGame;
+    public string PapegøjeMiniGame;
 
 
     public void changeScene()
@@ -53,6 +54,11 @@ public class SceneChange : MonoBehaviour
     public void FodringButton()
     {
         SceneManager.LoadScene(FodringMiniGame);
+    }
+
+    public void PapegøjeButton()
+    {
+        SceneManager.LoadScene(PapegøjeMiniGame);
     }
 
     public void MenuButton()
